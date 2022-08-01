@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300;400;700;900&display=swap');
+
+* {
+  font-family: 'Rokkitt', serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+section {
+  background-color: rgb(245, 245, 245);
+}
+
+/* LANDING PAGE */
+
+#landing__page {
+  min-height: 100vh;
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.personal__logo--wrapper {
+  height: 42px;
+  width: 75px;
+}
+
+#personal__logo {
+  width: 100%;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
+
+.nav__link--anchor {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+}
+
+.fa-circle-half-stroke {
+  font-size: 20px;
+}
