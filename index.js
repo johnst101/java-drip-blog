@@ -1,6 +1,3 @@
-// template_epai36s
-// service_ununibc
-// bhCwExiy77joHbRXY
 /* <script type="text/javascript"
 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
@@ -12,5 +9,32 @@ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 
 function contact() {
   event.preventDefault();
-  console.log("It worked")
-}
+  const loading = document.querySelector('.modal__overlay--loading');
+  const success = document.querySelector('.modal__overlay--success');
+  loading.classList += " modal__overlay--visible";
+  emailjs
+    .sendForm(
+      'service_ununibc',
+      'template_epai36s',
+      event.target,
+      'bhCwExiy77joHbRXY'
+    ).then(() => {
+      loading.classList.remove("modal__overlay--visible");
+      success.classList += " modal__overlay--visible";
+    }).catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "The email service is temporarily unavailable. Please contact me directly at tylercjohnson16@gmail.com."
+      );
+    });
+  }
+
+  let isModalOpen = false;
+  function toggleModal() {
+    if (isModalOpen) {
+      isModalOpen = false;
+      return document.body.classList.remove("modal--open");
+    }
+    isModalOpen = true;
+    document.body.classList += " modal--open";
+  }
