@@ -248,11 +248,19 @@ nav {
 
 .personal__logo--wrapper {
   height: 42px;
-  width: 75px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #personal__logo {
-  width: 100%;
+  width: 25%;
+}
+
+.blog__title {
+  font-size: 42px;
+  color: #1F2122;
 }
 
 .nav__link--list {
